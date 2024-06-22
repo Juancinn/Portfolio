@@ -1,0 +1,48 @@
+@keyframes gradientTransition {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.navBubbles {
+  position: fixed;
+  top: 50%;
+  left: 28px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.navBubble {
+  width: 50px;
+  height: 50px;
+  background: var(--default-gradient);
+  background-size: 200% 200%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background-position 2s, box-shadow 0.5s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navBubble:hover {
+  background-position: 100% 50%;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(var(--gradient-start-rgb), 0.5),
+    0 0 25px rgba(var(--gradient-end-rgb), 0.5);
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: white;
+  background: var(--default-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

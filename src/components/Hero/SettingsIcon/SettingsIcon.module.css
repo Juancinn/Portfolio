@@ -1,0 +1,14 @@
+.settingsIcon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.settingsIcon.show {
+  opacity: 1;
+}

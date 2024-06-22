@@ -1,0 +1,30 @@
+.musicSection {
+  padding: 20px;
+}
+
+.trackList {
+  list-style: none;
+  padding: 0;
+}
+
+.trackList li {
+  margin: 10px 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.trackList li:hover {
+  transform: scale(1.1);
+}
+
+.video {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+  transition: transform 0.3s ease;
+}
+
+.video:hover {
+  transform: scale(1.05);
+}

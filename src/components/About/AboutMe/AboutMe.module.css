@@ -1,0 +1,79 @@
+.aboutMeSection {
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeInUp 0.6s ease-out;
+  color: #fff;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: var(--gradient-start);
+  background: -webkit-linear-gradient(
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tabs {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  background: #333;
+  color: #fff;
+  transition: background 0.3s ease;
+  margin: 0;
+  font-weight: bold;
+}
+
+.tab:first-of-type {
+  border-top-left-radius: 10px;
+}
+
+.tab:last-of-type {
+  border-top-right-radius: 10px;
+}
+
+.tab.active {
+  background: var(--gradient-start);
+  color: #000;
+}
+
+.tab:not(.active):hover {
+  background: #444;
+}
+
+.tabContent {
+  display: none;
+}
+
+.tabContent.active {
+  display: block;
+  padding: 20px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}

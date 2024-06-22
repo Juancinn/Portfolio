@@ -1,0 +1,34 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 1rem;
+  overflow: hidden;
+  position: relative; /* Add this to enable absolute positioning of the author */
+}
+
+.quoteContainer {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.heroText {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.author {
+  position: absolute;
+  bottom: 38%;
+  right: 10%;
+  font-size: 2rem;
+  text-align: right;
+}
