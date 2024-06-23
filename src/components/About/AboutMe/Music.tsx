@@ -4,13 +4,13 @@ import styles from "./Music.module.css";
 
 const Music = () => {
   const artists = [
-    { name: "Radiohead", image: "src/assets/radiohead.png" },
-    { name: "Twenty One Pilots", image: "src/assets/top.png" },
-    { name: "Mac DeMarco", image: "src/assets/mac-demarco.png" },
-    { name: "Bad Bunny", image: "src/assets/bad-bunny.png" },
-    { name: "Kanye West", image: "src/assets/kanye-west.png" },
-    { name: "Lolabum", image: "src/assets/lolabum.jpg" },
-    { name: "Pink Floyd", image: "src/assets/pink-floyd.png" },
+    { name: "Radiohead", image: "/radiohead.png" },
+    { name: "Twenty One Pilots", image: "/top.png" },
+    { name: "Mac DeMarco", image: "/mac-demarco.png" },
+    { name: "Bad Bunny", image: "/bad-bunny.png" },
+    { name: "Kanye West", image: "/kanye-west.png" },
+    { name: "Lolabum", image: "/lolabum.jpg" },
+    { name: "Pink Floyd", image: "/pink-floyd.png" },
   ];
 
   const responsive = {
@@ -52,6 +52,7 @@ const Music = () => {
         centerMode={true}
         itemClass={styles.carouselItem}
         beforeChange={(nextSlide) => {
+          // Determine the next center image and apply active class
           const items = document.querySelectorAll(`.${styles.carouselItem}`);
           items.forEach((item, index) => {
             const imageContainer = item.querySelector(
@@ -81,7 +82,7 @@ const Music = () => {
       </Carousel>
       <div className={styles.textContainer}>
         <img
-          src="src/assets/playlist-cover.jpeg"
+          src="/playlist-cover.jpeg"
           alt="Playlist Cover"
           className={styles.playlistCover}
         />

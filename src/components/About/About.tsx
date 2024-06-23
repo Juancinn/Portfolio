@@ -9,12 +9,12 @@ const About: React.FC = () => {
       <div className={styles.content}>
         <div className={styles.imageContainer}>
           <img
-            src="src/assets/About-1.jpg"
+            src="/About-1.jpg"
             alt="Your Name"
             className={styles.profileImage}
           />
           <img
-            src="src/assets/About-2.jpg"
+            src="/About-2.jpg"
             alt="Your Name Hover"
             className={`${styles.profileImage} ${styles.hoverImage}`}
           />
@@ -27,11 +27,7 @@ const About: React.FC = () => {
             focus on React, as well as data structures and algorithms, database
             management, system design, and testing.
           </p>
-          <a
-            href="src/assets/Juan Moncayo.pdf"
-            className={styles.resumeButton}
-            download
-          >
+          <a href="/Juan Moncayo.pdf" className={styles.resumeButton} download>
             Download Resume
           </a>
         </div>
