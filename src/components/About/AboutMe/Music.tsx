@@ -52,16 +52,17 @@ const Music = () => {
         centerMode={true}
         itemClass={styles.carouselItem}
         beforeChange={(nextSlide) => {
-          // Determine the next center image and apply active class
           const items = document.querySelectorAll(`.${styles.carouselItem}`);
           items.forEach((item, index) => {
             const imageContainer = item.querySelector(
               `.${styles.imageContainer}`
-            );
-            if (index === nextSlide + 1) {
-              Object.assign(imageContainer.style, customTransition);
-            } else {
-              Object.assign(imageContainer.style, normalTransition);
+            ) as HTMLElement | null;
+            if (imageContainer) {
+              if (index === nextSlide + 1) {
+                Object.assign(imageContainer.style, customTransition);
+              } else {
+                Object.assign(imageContainer.style, normalTransition);
+              }
             }
           });
         }}
