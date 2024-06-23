@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import TabContent from "./TabContent";
 import styles from "./AboutMe.module.css";
 
-const AboutMe: React.FC = () => {
+const AboutMe = () => {
   const [activeTab, setActiveTab] = useState<string | null>(null);
 
   const handleTabClick = (tab: string) => {
@@ -11,6 +12,10 @@ const AboutMe: React.FC = () => {
   return (
     <div className={styles.aboutMeSection}>
       <h2 className={styles.title}>More About Me</h2>
+      <p className={styles.introText}>
+        I am more than my academics and there is a lot more to know about me. So
+        here's some cool stuff.
+      </p>
       <div className={styles.tabs}>
         <div
           className={`${styles.tab} ${
@@ -37,30 +42,7 @@ const AboutMe: React.FC = () => {
           Volunteering
         </div>
       </div>
-      <div
-        className={`${styles.tabContent} ${
-          activeTab === "Music" ? styles.active : ""
-        }`}
-      >
-        <h3>Music</h3>
-        <p>Content about music...</p>
-      </div>
-      <div
-        className={`${styles.tabContent} ${
-          activeTab === "ContentCreation" ? styles.active : ""
-        }`}
-      >
-        <h3>Content Creation</h3>
-        <p>Content about content creation...</p>
-      </div>
-      <div
-        className={`${styles.tabContent} ${
-          activeTab === "Volunteering" ? styles.active : ""
-        }`}
-      >
-        <h3>Volunteering</h3>
-        <p>Content about volunteering...</p>
-      </div>
+      <TabContent activeTab={activeTab} />
     </div>
   );
 };

@@ -1,30 +1,106 @@
-.musicSection {
+.music {
   padding: 20px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.6s ease-out;
+  text-align: center;
 }
 
-.trackList {
-  list-style: none;
-  padding: 0;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.trackList li {
-  margin: 10px 0;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+.carouselItem {
+  padding: 0 10px; /* Adjust the padding to add space between items */
 }
 
-.trackList li:hover {
-  transform: scale(1.1);
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  padding: 20px; /* Add padding to make the container bigger */
+  margin: 20px 0; /* Add margin to add space between top and bottom */
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(50%);
 }
 
-.video {
-  display: block;
+.imageContainer img {
   width: 100%;
-  max-width: 600px;
-  margin: 20px 0;
+  height: auto;
+  border-radius: 10px;
   transition: transform 0.3s ease;
 }
 
-.video:hover {
-  transform: scale(1.05);
+.carouselItem .imageContainer.active img {
+  transform: scale(1.2);
+  filter: grayscale(0%);
+}
+
+.artistName {
+  position: absolute;
+  bottom: 20px; /* Adjusted from 10px to 20px */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px 15px; /* Adjusted padding to make the text more visible */
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.imageContainer:hover .artistName {
+  opacity: 1;
+}
+
+.textContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  background: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.playlistCover {
+  width: 250px; /* Make the image bigger */
+  height: 250px; /* Make the image bigger */
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.text {
+  flex: 1;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.spotifyButton {
+  display: block;
+  width: 60%; /* Adjust width to make it less wide */
+  padding: 15px 0; /* Adjust padding to make it taller */
+  margin: 20px auto 0; /* Center the button and add margin-top */
+  background: #1db954; /* Solid green color */
+  color: #fff; /* White text */
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  text-align: center; /* Center the text */
+}
+
+.spotifyButton:hover {
+  background: #1ed760;
 }

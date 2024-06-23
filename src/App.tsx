@@ -36,8 +36,6 @@ const App: React.FC = () => {
   const [showContent, setShowContent] = useState(false);
   const [showNavBubbles, setShowNavBubbles] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  const [gradient, setGradient] = useState<string[]>(["#f3ec78", "#af4261"]);
-  const [rgb, setRgb] = useState<string[]>(["243, 236, 120", "175, 66, 97"]);
   const [visibleSection, setVisibleSection] = useState<string>("Hero");
 
   useEffect(() => {
@@ -62,8 +60,6 @@ const App: React.FC = () => {
   }, [showNavBubbles]);
 
   const handleSelectGradient = (colors: string[], rgb: string[]) => {
-    setGradient(colors);
-    setRgb(rgb);
     document.documentElement.style.setProperty("--gradient-start", colors[0]);
     document.documentElement.style.setProperty("--gradient-end", colors[1]);
     document.documentElement.style.setProperty("--gradient-start-rgb", rgb[0]);

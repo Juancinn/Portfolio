@@ -38,6 +38,9 @@ importers:
       react-icons:
         specifier: ^5.2.1
         version: 5.2.1(react@18.3.1)
+      react-multi-carousel:
+        specifier: ^2.8.5
+        version: 2.8.5
       three:
         specifier: ^0.165.0
         version: 0.165.0
@@ -1434,6 +1437,10 @@ packages:
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  react-multi-carousel@2.8.5:
+    resolution: {integrity: sha512-C5DAvJkfzR2JK9YixZ3oyF9x6R4LW6nzTpIXrl9Oujxi4uqP9SzVVCjl+JLM3tSdqdjAx/oWZK3dTVBSR73Q+w==}
+    engines: {node: '>=8'}
 
   react-reconciler@0.27.0:
     resolution: {integrity: sha512-HmMDKciQjYmBRGuuhIaKA1ba/7a+UsM5FzOZsMO2JYHt9Jh8reCb7j1eDC95NOyUlKM9KRyvdx0flBuDvYSBoA==}
@@ -3088,6 +3095,8 @@ snapshots:
       react: 18.3.1
 
   react-is@16.13.1: {}
+
+  react-multi-carousel@2.8.5: {}
 
   react-reconciler@0.27.0(react@18.3.1):
     dependencies:
